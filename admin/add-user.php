@@ -11,7 +11,7 @@ if(isset($_POST["save"])){
    $password = mysqli_real_escape_string($conn,md5($_POST['password']));
    $role = mysqli_real_escape_string($conn,$_POST['role']);
 
-   echo $sql = "SELECT username FROM user WHERE username = '{$user}'";
+    $sql = "SELECT username FROM user WHERE username = '{$user}'";
    
    $result = mysqli_query($conn, $sql) or die("Query failed");
 
